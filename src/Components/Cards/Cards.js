@@ -18,7 +18,7 @@ export default function Cards() {
         <MDBCard className='h-100'>
           <MDBCardImage
             src='Images/blackrosetea.webp'
-            alt='...'
+            alt='blackrose'
             position='top'
           />
           <MDBCardBody>

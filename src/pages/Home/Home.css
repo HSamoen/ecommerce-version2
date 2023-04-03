@@ -1,0 +1,24 @@
+.featuredProducts {
+    margin: 100px;
+  }
+  
+  .featuredProducts h1{
+    font-size:20px;
+    margin-bottom: 50px;
+  }
+  
+  .featuredProducts h2{
+    margin-top: 50px;
+    font-size:20px;
+  }
+  
+  .view-all {
+    padding: 150px;
+    color: rgb(60, 60, 60);
+    text-decoration: 1px underline;
+  }
+  
+  .view-all :hover {
+    text-decoration: 1px underline;
+  }
+  

@@ -12,12 +12,12 @@ import {
 
 export default function Cards() {
   return (
-    <div>
+    <div className='homepage-cards'>
       <MDBRow className='row-cols-1 row-cols-md-4 g-4'>
       <MDBCol>
         <MDBCard className='h-100'>
           <MDBCardImage
-            src='Images/blackrosetea.webp'
+            src='https://cdn.shopify.com/s/files/1/0311/4398/5197/products/ROSE_BLACK_3d550f88-e237-44e3-9d54-424072b4f554_800x.jpg?v=1650401031'
             alt='blackrose'
             position='top'
           />
@@ -33,8 +33,8 @@ export default function Cards() {
       <MDBCol>
         <MDBCard className='h-100'>
           <MDBCardImage
-            src='Images/chamomiletea.webp'
-            alt='...'
+            src='https://cdn.shopify.com/s/files/1/0311/4398/5197/products/EGYPTIAN_CHAMOMILE_800x.jpg?v=1654789278'
+            alt='chamomile-tea'
             position='top'
           />
           <MDBCardBody>
@@ -47,8 +47,8 @@ export default function Cards() {
       <MDBCol>
         <MDBCard className='h-100'>
           <MDBCardImage
-            src='Images/chaitea.webp'
-            alt='...'
+            src='https://cdn.shopify.com/s/files/1/0311/4398/5197/products/ROOIBOS_CHAI_1200x.jpg?v=1582517957'
+            alt='chai-tea'
             position='top'
           />
           <MDBCardBody>
@@ -63,8 +63,8 @@ export default function Cards() {
       <MDBCol>
         <MDBCard className='h-100'>
           <MDBCardImage
-               src='Images/whiteTea.webp'
-            alt='...'
+               src='https://cdn.shopify.com/s/files/1/0311/4398/5197/products/WHITE_PEACH_800x.jpg?v=1582505609'
+            alt='peach-tea'
             position='top'
           />
           <MDBCardBody>

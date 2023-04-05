@@ -1,0 +1,119 @@
+.products {
+    margin: 100px;
+    display: grid; 
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .product-card{
+    margin-bottom: 70px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.197);
+  }
+  
+  .product-card img{
+    padding: 10px;
+    border-radius: 15px;
+  }
+  
+  .product-filters{
+    background-color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.197);
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .search-bar {
+   padding-top: 100px;
+   padding-right: 100px;
+   padding-left: 110px;
+   } 
+  
+  .search-bar input {
+    width: 250px;
+    color:white;
+  }
+.category-filter {
+  margin-left:110px; 
+  margin-top:20px; 
+  font-size:15px;
+}
+
+.category-input{
+  width: 250px;
+  height: 35px;
+}
+
+.price-filter{
+  margin-top:20px;
+  padding-left: 110px;
+  padding-bottom: 10px;
+}
+
+.price-filter input {
+  width: 200px;
+}
+
+.price-filter h1 {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+  /* site responsiveness ---------------------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+  .products {
+    margin: 100px;
+    display: grid; 
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 20px;
+  }
+
+  .product-filters{
+    background-color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.197);
+    margin: 10px;
+    border-radius: 10px;
+    padding-left: 35px;
+  }
+ }
+ 
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width:601px) and (max-width:767px){
+  .products {
+    margin: 100px;
+    display: grid; 
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 20px;
+  }
+  
+}
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width:768px) and (max-width:991px){
+  .products {
+    margin: 100px;
+    display: grid; 
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 20px;
+  }
+  
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width:992px) and (max-width:1200px){
+ .products img{
+  padding: 10px;
+ }
+ }

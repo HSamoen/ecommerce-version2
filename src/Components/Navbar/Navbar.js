@@ -1,54 +1,57 @@
-import React from 'react'
-import './Navbar.css';
 import {NavLink} from 'react-router-dom'
+import React, { useState } from 'react';
+import {
+  MDBNavbar,
+  MDBContainer,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarToggler,
+  MDBCollapse,
+} from 'mdb-react-ui-kit';
 
 
-const Navbar = () => {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-mainbg">
-            <NavLink className="navbar-header" to="/" exact>
-            <img src="Images/wt-logo2.png" alt="flower-logo" />
-            </NavLink>
+export default function App() {
+  const [showNavRight, setShowNavRight] = useState(false);
 
-            <button 
-                className="navbar-toggler"
-                type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i className="fas fa-bars text-white"></i>
-            </button>
-    
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto">
-                <div className="hori-selector">
-                    <div className="left"></div>
-                    <div className="right"></div>
-                </div>
+  return (
+    <MDBNavbar expand='lg' light bgColor='white'>
+        <NavLink  to="/" exact>
+          <img style={{width:"40%", paddingLeft:10}} src="https://i.ibb.co/Zd2h8pr/wellness-tea-co-1.png" alt="flower-logo" />
+        </NavLink>
+      <MDBContainer fluid>
+        <MDBNavbarToggler
+          type='button'
+          data-target='#navbarRightAlignExample'
+          aria-controls='navbarRightAlignExample'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+          onClick={() => setShowNavRight(!showNavRight)}
+        >
+          <MDBIcon icon='bars' fas />
+        </MDBNavbarToggler>
 
-                <li className="nav-item active">
-                    <NavLink className="nav-link" to="/" exact>
-                        <i className="far fa-clone"></i> 
-                        Home
-                    </NavLink>
-                </li>
+        <MDBCollapse navbar show={showNavRight}>
+          <MDBNavbarNav right fullWidth={false} className='mb-2 mb-lg-0'>
+            <MDBNavbarItem style={{padding:15, fontSize:18}} > 
+            <i style={{paddingRight:10}} className="far fa-clone"></i> 
+             <NavLink to="/">Home</NavLink>
+           
+            </MDBNavbarItem>
+            <MDBNavbarItem style={{padding:15, fontSize:18}}> 
+            <i style={{paddingRight:10}} className="fas fa-shopping-bag"></i>
+             <NavLink to="/products">Products</NavLink>
+            </MDBNavbarItem>
 
-                <li className="nav-item">
-                    <NavLink className="nav-link" to="/products" exact>
-                        <i className="fas fa-shopping-bag"></i>Products
-                    </NavLink>
-                </li>
-                
-                <li className="nav-item">
-                    <NavLink className="nav-link" to="/contact" exact>
-                        <i className="far fa-address-book"></i>Contact
-                    </NavLink>
-                </li>
-            </ul>
-            </div>
-        </nav>
-    )
-
-} 
-export default Navbar;
+            <MDBNavbarItem style={{padding:15, fontSize:18}}> 
+            <i style={{paddingRight:10}} className="far fa-address-book"></i>
+             <NavLink to="/contact">Contact</NavLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+        </MDBCollapse>
+      </MDBContainer>
+    </MDBNavbar>
+  );
+}

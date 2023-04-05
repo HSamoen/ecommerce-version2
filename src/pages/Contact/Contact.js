@@ -41,7 +41,7 @@ const Contact = () => {
         }
 
         if (!values.email) {
-            errors.email = "Email is Required!"
+            errors.email = "Email is required!"
         } else if (!regEmail.test(values.email)) {
             errors.email = "Please enter a valid email!"
         }

@@ -71,7 +71,7 @@ function handleCategoryChange(event) {
 
       <div className="price-filter">
       <input type="range" onInput={ handleInput } />
-      <h1>Price: { price }</h1>
+      <h1>Price: ${ price }</h1>
       </div>
 </div>
 

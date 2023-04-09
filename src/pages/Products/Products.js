@@ -20,14 +20,31 @@ import {
 
 
 const Products = () => {
+
+  ///fetching products from database: (my database connection was created outside of my react app (separate repo on github))
+  // const [products, setProducts] = useState([])
+
+
+  //   useEffect(() => {
+  //       const fetchAllProducts = async () => {
+  //           try {
+  //               const res = await axios.get("http://localhost:3002/products")
+  //               setProducts(res.data)
+  //           } catch(err) {
+  //               console.log(err)
+  //           }
+  //       }
+  //       fetchAllProducts()
+  //   }, [])
+  //   }
   
+
+
+  ///fetching products from array:
   const[searchItem, setSearchItem] = useState("")
   const [ price, setPrice ] = useState(16);
   const [selectedCategory, setSelectedCategory] = useState("");
   
-
-
-
 
 function handleCategoryChange(event) {
   setSelectedCategory(event.target.value);
